@@ -16,6 +16,10 @@ gem 'spring',        group: :development
 
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'rspec-rails', '~> 2.0', group: [:development, :test]
+
+gem 'capybara', '~> 2.1.0', group: :test
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
