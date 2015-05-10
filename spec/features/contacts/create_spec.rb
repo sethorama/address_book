@@ -14,13 +14,13 @@ describe "Creating contacts" do
 		visit "/contacts"
 		click_link "New Contact"
 
-		fill_in "First name", with: options[:first_name]
-		fill_in "Last name", with: options[:last_name]
+		fill_in "First Name", with: options[:first_name]
+		fill_in "Last Name", with: options[:last_name]
 		fill_in "Street", with: options[:street]
 		fill_in "City", with: options[:city]
 		fill_in "State", with: options[:state]
-		fill_in "Zip code", with: options[:zip_code]
-		fill_in "Phone number", with: options[:phone_number]
+		fill_in "Zip Code", with: options[:zip_code]
+		fill_in "Phone Number", with: options[:phone_number]
 		click_button "Create Contact"
 	end
 
