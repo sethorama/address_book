@@ -23,7 +23,13 @@ describe ContactsController do
   # This should return the minimal set of attributes required to create a valid
   # Contact. As you add validations to Contact, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "first_name" => "MyString" } }
+  let(:valid_attributes) { { "first_name" => "MyString",
+                             "last_name" => "MyString",
+                             "street" => "MyString",
+                             "city" => "MyString",
+                             "state" => "MyString",
+                             "zip_code" => "11111",
+                             "phone_number" => "5555551212" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
