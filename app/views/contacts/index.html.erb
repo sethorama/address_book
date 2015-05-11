@@ -1,5 +1,10 @@
 <h1>Listing contacts</h1>
 
+<% ('A'..'Z').each do |letter| %>
+<a href="#<%= letter %>"><%= letter %></a>
+<% end %>
+
+
 <table>
   <thead>
     <tr>

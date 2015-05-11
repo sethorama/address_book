@@ -6,6 +6,10 @@ class UserSessionsController < ApplicationController
   	user = User.find_by(email: params[:email])
 
   	if user && user.authenticate(params[:password])
+      if params[:remeber_me]
+        signed_token = Rials.application.message_verifier(:remeber_me).generate(user.id)
+        cookies.permanent.signed[:remember_me_token] = signed_token
+      end
 	  	session[:user_id] = user.id
 	  	flash[:success] = "You've been logged in!"
 	  	redirect_to contacts_path
@@ -17,6 +21,7 @@ class UserSessionsController < ApplicationController
 
   def destroy
   	session[:user_id] = nil
+    cookies.delete(:remember_me_token)
   	reset_session
   	redirect_to root_path, notice: "You have been logged out."
   end
