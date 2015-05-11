@@ -20,6 +20,8 @@ gem 'rspec-rails', '~> 2.0', group: [:development, :test]
 
 gem 'capybara', '~> 2.1.0', group: :test
 
+gem 'shoulda-matchers', group: :test
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

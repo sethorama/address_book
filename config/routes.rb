@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
-  resources :users
+  get 'user_sessions/new'
+  post 'user_sessions/new'
+
+  get "/login" => "user_sessions#new", as: :login
+  delete "/logout" => "user_sessions#destroy", as: :logout
+
+  get 'user_sessions/create'
+
+  resources :users, except: [:show]
+  resources :user_sessions, only: [:new, :create]
 
   resources :contacts
   root 'contacts#index'

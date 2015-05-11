@@ -23,7 +23,13 @@ describe UsersController do
   # This should return the minimal set of attributes required to create a valid
   # User. As you add validations to User, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "user_first_name" => "MyString" } }
+  let(:valid_attributes) { { 
+    "user_first_name" => "Seth",
+    "user_last_name" => "Reece",
+    "email" => "seth@me.com",
+    "password" => "password",
+    "password_confirmation" => "password" 
+  } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -67,9 +73,14 @@ describe UsersController do
         assigns(:user).should be_persisted
       end
 
-      it "redirects to the created user" do
+      it "redirects to the contacts page" do
         post :create, {:user => valid_attributes}, valid_session
-        response.should redirect_to(User.last)
+        response.should redirect_to(contacts_path)
+      end
+
+      it "sets the session user_id to the created user.id" do
+        post :create, {:user => valid_attributes}, valid_session
+        expect(session[:user_id]).to eq(User.find_by(email: valid_attributes["email"]).id)
       end
     end
 
@@ -86,7 +97,7 @@ describe UsersController do
         User.any_instance.stub(:save).and_return(false)
         post :create, {:user => { "user_first_name" => "invalid value" }}, valid_session
         response.should render_template("new")
-      end
+      end      
     end
   end
 
