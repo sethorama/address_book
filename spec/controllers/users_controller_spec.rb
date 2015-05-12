@@ -35,14 +35,15 @@ describe UsersController do
   # in order to pass any filters (e.g. authentication) defined in
   # UsersController. Be sure to keep this updated too.
   let(:valid_session) { {} }
+  
 
-  describe "GET show" do
-    it "assigns the requested user as @user" do
-      user = User.create! valid_attributes
-      get :show, {:id => user.to_param}, valid_session
-      assigns(:user).should eq(user)
-    end
-  end
+  # describe "GET show" do
+  #   it "assigns the requested user as @user" do
+  #     user = User.create! valid_attributes
+  #     get :show, {:id => user.to_param}, valid_session
+  #     assigns(:user).should eq(user)
+  #   end
+  # end
 
   describe "GET new" do
     it "assigns a new user as @user" do

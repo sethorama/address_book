@@ -12,6 +12,7 @@ describe UsersController do
     end
 
     it "routes to #show" do
+      pending
       get("/users/1").should route_to("users#show", :id => "1")
     end
 

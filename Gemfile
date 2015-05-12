@@ -22,6 +22,9 @@ gem 'capybara', '~> 2.1.0', group: :test
 
 gem 'shoulda-matchers', group: :test
 
+gem 'factory_girl_rails', '~> 4.0', group: [:development, :test]
+gem 'rspec-activemodel-mocks', group: :test
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

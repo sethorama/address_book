@@ -1,8 +1,9 @@
 require 'spec_helper'
 
 describe "Creating contacts" do
+	let(:user) { create(:user) }
 
-	def create_contact(options={})
+  def create_contact(options={})
 		options[:first_name] ||= "First"
 		options[:last_name] ||= "Last"
 		options[:street] ||= "Street"
@@ -23,6 +24,10 @@ describe "Creating contacts" do
 		fill_in "Phone Number", with: options[:phone_number]
 		click_button "Create Contact"
 	end
+
+	before do
+    sign_in user, password: "password"
+  end
 
 	it "redirects to contact index page on success" do
 		create_contact

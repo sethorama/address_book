@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe "Editing contacts" do
+	let!(:user) { create(:user) }
 	let!(:contact) { Contact.create(
 													first_name: "First",
 													last_name: "Last",
@@ -31,6 +32,10 @@ describe "Editing contacts" do
 		fill_in "Zip Code", with: options[:zip_code]
 		fill_in "Phone Number", with: options[:phone_number]
 		click_button "Update Contact"
+	end
+
+	before do
+		sign_in user, password: "password"
 	end
 
 	it "updates successfully" do

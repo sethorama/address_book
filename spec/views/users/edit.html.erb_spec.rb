@@ -2,11 +2,12 @@ require 'spec_helper'
 
 describe "users/edit" do
   before(:each) do
-    @user = assign(:user, stub_model(User,
+    @user = assign(:user, mock_model(User,
       :user_first_name => "MyString",
       :user_last_name => "MyString",
       :email => "MyString",
-      :password_digest => "MyString"
+      :password => "MyString",
+      :password_confirmation => "MyString"
     ))
   end
 
@@ -18,7 +19,8 @@ describe "users/edit" do
       assert_select "input#user_user_first_name[name=?]", "user[user_first_name]"
       assert_select "input#user_user_last_name[name=?]", "user[user_last_name]"
       assert_select "input#user_email[name=?]", "user[email]"
-      assert_select "input#user_password_digest[name=?]", "user[password_digest]"
+      assert_select "input#user_password[name=?]", "user[password]"
+      assert_select "input#user_password_confirmation[name=?]", "user[password_confirmation]"
     end
   end
 end
