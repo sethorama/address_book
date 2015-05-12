@@ -1,0 +1,48 @@
+.nav-bar {
+	width: 100%;
+	background: #d2d8e7;
+	top: 0;
+	position: fixed;
+	border-bottom: 1px solid;
+	border-top: 1px solid;	
+}
+
+.nav-links {
+	max-width: 80%;
+	margin: auto;
+	padding-bottom: 15px;
+}
+
+.nav-links h1 {
+	color: #2f4f22;
+	font-weight: normal;
+	font-size: 2.25em;
+	text-align: center;
+}
+
+.nav-links a,
+.nav-links a:visited {
+	color: #2f4f22;
+}
+
+.nav-links a:hover {
+	color: #429e1e;
+}
+
+.nav-links a {
+	font-size: 2em;
+	display: inline-block;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+	border: 1px solid;
+	border-radius: 5px;
+}
+
+.nav-left {
+	float: left;
+}
+
+.nav-right {
+	float: right;
+}
+

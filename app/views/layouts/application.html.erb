@@ -2,29 +2,31 @@
 <html>
 <head>
   <title>Address Book</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= render partial: "layouts/flash" %>
-
-	<div class="nav-bar">
+		<div class="nav-bar clear">
 		<div class="nav-links">
 			<h1>Address Book</h1>
 			<ul>
 				<% if logged_in? %>
-					<li><%= link_to "Contacts", contacts_path %></li>
-					<li><%= link_to "Sign Out", logout_path, method: :delete %></li>
+					<li><%= link_to "Contacts", contacts_path, class: "nav-left" %></li>
+					<li><%= link_to "Sign Out", logout_path, method: :delete, class: "nav-right" %></li>
 				<% else %>
-					<li><%= link_to "Sign In", login_path %></li>
-					<li><%= link_to "Register", new_user_path %></li>
+					<li><%= link_to "Sign In", login_path, class: "nav-left"%></li>
+					<li><%= link_to "Register", new_user_path, class: "nav-right" %></li>
 				<% end %>
 			</ul>	
 		</div>
 	</div>
+	<div class="body-wrapper">
+		<%= render partial: "layouts/flash" %>
 
-<%= yield %>
+		<%= yield %>
+	</div>
 
 </body>
 </html>
