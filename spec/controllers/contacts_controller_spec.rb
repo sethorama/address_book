@@ -42,16 +42,24 @@ describe ContactsController do
   end
 
   describe "GET index" do
-    it "assigns all contacts as @contacts" do
-      contact = Contact.create! valid_attributes
-      get :index, {}, valid_session
-      assigns(:contacts).should eq([contact])
+    context "logged in" do
+      it "assigns all contacts as @contacts" do
+        contact = user.contacts.create! valid_attributes
+        get :index, {}, valid_session
+        assigns(:contacts).should eq([contact])
+      end
+
+      it "does not load other user's contacts" do
+        other_contact = Contact.create!(valid_attributes.merge(user_id: create(:user).id))
+        get :index, {}, valid_session
+        expect(assigns(:contacts)).to_not include(other_contact)
+      end
     end
   end
 
   describe "GET show" do
     it "assigns the requested contact as @contact" do
-      contact = Contact.create! valid_attributes
+      contact = user.contacts.create! valid_attributes
       get :show, {:id => contact.to_param}, valid_session
       assigns(:contact).should eq(contact)
     end
@@ -66,7 +74,7 @@ describe ContactsController do
 
   describe "GET edit" do
     it "assigns the requested contact as @contact" do
-      contact = Contact.create! valid_attributes
+      contact = user.contacts.create! valid_attributes
       get :edit, {:id => contact.to_param}, valid_session
       assigns(:contact).should eq(contact)
     end
@@ -112,7 +120,7 @@ describe ContactsController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested contact" do
-        contact = Contact.create! valid_attributes
+        contact = user.contacts.create! valid_attributes
         # Assuming there are no other contacts in the database, this
         # specifies that the Contact created on the previous line
         # receives the :update_attributes message with whatever params are
@@ -122,13 +130,13 @@ describe ContactsController do
       end
 
       it "assigns the requested contact as @contact" do
-        contact = Contact.create! valid_attributes
+        contact = user.contacts.create! valid_attributes
         put :update, {:id => contact.to_param, :contact => valid_attributes}, valid_session
         assigns(:contact).should eq(contact)
       end
 
       it "redirects to the contact" do
-        contact = Contact.create! valid_attributes
+        contact = user.contacts.create! valid_attributes
         put :update, {:id => contact.to_param, :contact => valid_attributes}, valid_session
         response.should redirect_to(contact)
       end
@@ -136,7 +144,7 @@ describe ContactsController do
 
     describe "with invalid params" do
       it "assigns the contact as @contact" do
-        contact = Contact.create! valid_attributes
+        contact = user.contacts.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Contact.any_instance.stub(:save).and_return(false)
         put :update, {:id => contact.to_param, :contact => { "first_name" => "invalid value" }}, valid_session
@@ -144,7 +152,7 @@ describe ContactsController do
       end
 
       it "re-renders the 'edit' template" do
-        contact = Contact.create! valid_attributes
+        contact = user.contacts.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Contact.any_instance.stub(:save).and_return(false)
         put :update, {:id => contact.to_param, :contact => { "first_name" => "invalid value" }}, valid_session
@@ -155,14 +163,14 @@ describe ContactsController do
 
   describe "DELETE destroy" do
     it "destroys the requested contact" do
-      contact = Contact.create! valid_attributes
+      contact = user.contacts.create! valid_attributes
       expect {
         delete :destroy, {:id => contact.to_param}, valid_session
-      }.to change(Contact, :count).by(-1)
+      }.to change(user.contacts, :count).by(-1)
     end
 
     it "redirects to the contacts list" do
-      contact = Contact.create! valid_attributes
+      contact = user.contacts.create! valid_attributes
       delete :destroy, {:id => contact.to_param}, valid_session
       response.should redirect_to(contacts_url)
     end

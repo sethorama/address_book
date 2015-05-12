@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "Editing contacts" do
 	let!(:user) { create(:user) }
-	let!(:contact) { Contact.create(
+	let!(:contact) { user.contacts.create(
 													first_name: "First",
 													last_name: "Last",
 													street: "Street",
