@@ -11,6 +11,7 @@ class ContactsController < ApplicationController
   # GET /contacts/1
   # GET /contacts/1.json
   def show
+    @contact = current_user.contacts.find(params[:id])
   end
 
   # GET /contacts/new

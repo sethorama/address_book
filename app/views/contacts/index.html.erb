@@ -1,41 +1,21 @@
-<h1>Listing contacts</h1>
+<h2>Contacts</h2>
+
+<!-- TODO create loop through to display contacts grouped by last name starts with letter
 
 <% ('A'..'Z').each do |letter| %>
 <a href="#<%= letter %>"><%= letter %></a>
-<% end %>
+<% end %> -->
 
 
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Street</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip code</th>
-      <th>Phone number</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<% ordered_contacts = @contacts.sort_by {|c| c.last_name.downcase} %>
 
-  <tbody>
-    <% @contacts.each do |contact| %>
-      <tr>
-        <td><%= contact.first_name %></td>
-        <td><%= contact.last_name %></td>
-        <td><%= contact.street %></td>
-        <td><%= contact.city %></td>
-        <td><%= contact.state %></td>
-        <td><%= contact.zip_code %></td>
-        <td><%= contact.phone_number %></td>
-        <td><%= link_to 'Show', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <% ordered_contacts.each do |contact| %>        
+    <div>      
+      <%= link_to contact do %>
+        <%= contact.first_name %> <%=contact.last_name %>        
+      <% end %>
+    </div>   
+  <% end %>
 
 <br>
 
