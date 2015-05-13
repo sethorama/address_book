@@ -8,7 +8,7 @@
 <% ordered_contacts = @contacts.sort_by {|c| c.last_name.downcase} %>  
   
   <% ('A'..'Z').each do |letter| %>
-    <div id="<% letter %>">
+    <div id='<%= letter %>'>
       <%= letter %>
     </div>
     <% ordered_contacts.each do |contact| %>
