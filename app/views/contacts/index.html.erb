@@ -1,20 +1,27 @@
 <h2>Contacts</h2>
 
-<!-- TODO create loop through to display contacts grouped by last name starts with letter
-
 <% ('A'..'Z').each do |letter| %>
-<a href="#<%= letter %>"><%= letter %></a>
-<% end %> -->
+  <a href="#<%= letter %>"><%= letter %></a>
+<% end %>
 
 
-<% ordered_contacts = @contacts.sort_by {|c| c.last_name.downcase} %>
-
-  <% ordered_contacts.each do |contact| %>        
-    <div>      
-      <%= link_to contact do %>
-        <%= contact.first_name %> <%=contact.last_name %>        
+<% ordered_contacts = @contacts.sort_by {|c| c.last_name.downcase} %>  
+  
+  <% ('A'..'Z').each do |letter| %>
+    <div id="<% letter %>">
+      <%= letter %>
+    </div>
+    <% ordered_contacts.each do |contact| %>
+      
+  		<% if contact.last_name.downcase.first == letter.downcase %>
+    		        
+  	    <div>      
+  	      <%= link_to contact do %>
+  	        <%= contact.first_name %> <%=contact.last_name %>        
+  	      <% end %>
+  	    </div>
       <% end %>
-    </div>   
+    <% end %>   
   <% end %>
 
 <br>
