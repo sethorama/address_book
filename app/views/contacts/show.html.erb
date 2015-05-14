@@ -1,13 +1,9 @@
-	<div class="contact"
-		<h3><%= @contact.first_name %> <%= @contact.last_name %></h3>
+	<div class="contact-show">
+		<h1><%= @contact.first_name %> <%= @contact.last_name %></h1>
 
 		<ul>
-		  <li><span class="contact-title">First Name: </span><%= @contact.first_name %></li>
-		  <li><span class="contact-title">Last name: </span><%= @contact.last_name %></li>
-		  <li><span class="contact-title">Street: </span><%= @contact.street %></li>
-		  <li><span class="contact-title">City: </span><%= @contact.city %></li>
-		  <li><span class="contact-title">State: </span><%= @contact.state %></li>
-		  <li><span class="contact-title">Zip Code: </span><%= @contact.zip_code %></li>
+		  <li><%= @contact.street %></li>
+		  <li><%= @contact.city %>, <%= @contact.state %> <%= @contact.zip_code %></li>
 		  <li><span class="contact-title">Phone Number: </span><%= @contact.phone_number %></li>
 		</ul>
 	</div>

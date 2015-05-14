@@ -1,63 +1,6 @@
-.contact a,
-.contact a:visited,
-.contacts-header,
-h2 {
-	color: #2f4f22;
+.contact-show ul li {
+	margin-bottom: 5px;
 	font-size: 1.5em;
+	margin-left :-35px;
+	color: #444;
 }
-
-.contact {
-	text-align: center;
-}
-
-.contact a {
-	padding: 5px 20px;
-	display: inline-block;
-	margin-top: 10px;
-	border-radius: 10px;
-	background: #e0e4ef;
-}
-
-.contact a:hover,
-.contacts-header a:hover {		
-	color: #429e1e;
-}
-
-.contact a:hover {
-	background: #d2d8e7;
-}
-
-.contacts-header {
-	max-width: 70%;
-	font-size: 1.25em;
-	margin: auto;
-}
-
-.contacts-header a {	
-	color: #2f4f22;	
-}
-
-.letter-header {
-	padding: 5px;
-	color: #1b4618;
-	border-bottom: 1px solid #1b4618;
-	margin-top: 5px;
-}
-
-@media (min-width: 769px) {
-	.contact {
-	text-align: left;
-	}
-	.contact a {
-		margin-left: 10px;
-	}
-
-	.letter-header {
-	max-width: 50%;
-	}
-
-	.contacts-wrapper {
-		margin-left: 150px;
-	}
-}
-
