@@ -1,7 +1,13 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
-	margin: 0;
 	padding: 0;
 	margin-top: 150px;
+	margin-bottom: 25px;
+	background: #efefef;
+	color: #2f4f22;
 }
 
 ul {
@@ -25,4 +31,44 @@ footer {
 	content: "";
 	clear: both;
 	display: table;
+}
+
+/* All Forms */
+
+input[type="text"],
+input[type="password"] {
+	width: 80%;
+	height: 30px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+
+label {
+	font-size: 1.25em;
+}
+
+input[type="submit"] {
+	background: #419613;
+	color: white;
+	font-size: 1.25em;
+	padding: 10px 50px;
+	cursor: pointer;
+	border: 1px solid white;
+	border-radius: 5px;
+	margin-top: 10px;	
+}
+
+.back,
+.back:visited {
+	color: #2f4f22;	
+}
+
+.back {
+	font-size: 1.25em;
+	border: 1px solid;
+	border-radius: 5px;
+	padding: 5px 15px;
+	margin-top: 15px;
+	display: inline-block;
 }
