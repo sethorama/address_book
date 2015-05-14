@@ -1,5 +1,5 @@
 <h2>Contacts</h2>
-<% ordered_contacts = @contacts.sort_by {|c| c.last_name.downcase} %>
+<% ordered_contacts = @contacts.sort_by {|c| [c.last_name.downcase, c.first_name.downcase] } %>
 
 <div class="contacts-header">
   <% ('A'..'Z').each do |letter| %>
