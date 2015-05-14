@@ -36,6 +36,10 @@ input[type="submit"] {
 	display: inline-block;
 }
 
+.back:hover {
+	color: #429e1e;
+}
+
 @media (min-width: 769px) {
 	input[type="text"],
 	input[type="password"] {
