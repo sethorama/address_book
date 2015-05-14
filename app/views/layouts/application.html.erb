@@ -13,7 +13,7 @@
 			<h1>Address Book</h1>
 			<ul>
 				<% if logged_in? %>
-					<li><%= link_to "Contacts", contacts_path, class: "nav-left" %></li>
+					<li><%= link_to "New Contact", new_contact_path, class: "nav-left" %></li>
 					<li><%= link_to "Sign Out", logout_path, method: :delete, class: "nav-right" %></li>
 				<% else %>
 					<li><%= link_to "Sign In", login_path, class: "nav-left"%></li>

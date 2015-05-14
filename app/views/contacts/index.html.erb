@@ -1,29 +1,29 @@
 <h2>Contacts</h2>
+<% ordered_contacts = @contacts.sort_by {|c| c.last_name.downcase} %>
 
-<% ('A'..'Z').each do |letter| %>
-  <a href="#<%= letter %>"><%= letter %></a>
+<div class="contacts-header">
+  <% ('A'..'Z').each do |letter| %>
+    <a href="#<%= letter %>"><%= letter %></a>
+  <% end %>
+</div>  
+  
+<% ('A'..'Z').each do |letter| %> 
+    
+  <div id='<%= letter %>' class="letter-header">
+    <%= letter %>
+  </div>
+
+  <% ordered_contacts.each do |contact| %>
+    <% if contact.last_name.downcase.first == letter.downcase %>
+	
+		        
+      <div class="contact">      
+	      <%= link_to contact do %>
+	        <%= contact.first_name %> <%=contact.last_name %>        
+	      <% end %>
+     </div>
+    <% end %>
+  <% end %>   
 <% end %>
 
-
-<% ordered_contacts = @contacts.sort_by {|c| c.last_name.downcase} %>  
-  
-  <% ('A'..'Z').each do |letter| %>
-    <div id='<%= letter %>'>
-      <%= letter %>
-    </div>
-    <% ordered_contacts.each do |contact| %>
-      
-  		<% if contact.last_name.downcase.first == letter.downcase %>
-    		        
-  	    <div>      
-  	      <%= link_to contact do %>
-  	        <%= contact.first_name %> <%=contact.last_name %>        
-  	      <% end %>
-  	    </div>
-      <% end %>
-    <% end %>   
-  <% end %>
-
 <br>
-
-<%= link_to 'New Contact', new_contact_path %>

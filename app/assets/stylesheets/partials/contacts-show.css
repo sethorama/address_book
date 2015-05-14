@@ -1,0 +1,42 @@
+.contact a,
+.contact a:visited,
+.contacts-header,
+h2 {
+	color: #2f4f22;
+	font-size: 1.5em;
+}
+
+.contact {
+	text-align: center;
+}
+
+.contact a {
+	padding: 5px 20px;
+	display: inline-block;
+	margin-top: 10px;
+	border-radius: 10px;
+	background: #e0e4ef;
+}
+
+.contact a:hover {
+	background: #d2d8e7;
+	color: #429e1e;
+}
+
+.contacts-header {
+	max-width: 70%;
+	font-size: 1.25em;
+	margin: auto;
+}
+
+.contacts-header a {	
+	color: #2f4f22;	
+}
+
+.letter-header {
+	padding: 5px;
+	color: #1b4618;
+	border-bottom: 1px solid #1b4618;
+	margin-top: 5px;
+}
+
