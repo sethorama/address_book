@@ -7,23 +7,25 @@
   <% end %>
 </div>  
   
-<% ('A'..'Z').each do |letter| %> 
-    
-  <div id='<%= letter %>' class="letter-header">
-    <%= letter %>
-  </div>
+<div class="contacts-wrapper">
+  <% ('A'..'Z').each do |letter| %> 
+      
+    <div id='<%= letter %>' class="letter-header">
+      <%= letter %>
+    </div>
 
-  <% ordered_contacts.each do |contact| %>
-    <% if contact.last_name.downcase.first == letter.downcase %>
-	
-		        
-      <div class="contact">      
-	      <%= link_to contact do %>
-	        <%= contact.first_name %> <%=contact.last_name %>        
-	      <% end %>
-     </div>
-    <% end %>
-  <% end %>   
-<% end %>
+    <% ordered_contacts.each do |contact| %>
+      <% if contact.last_name.downcase.first == letter.downcase %>
+  	
+  		        
+        <div class="contact">      
+  	      <%= link_to contact do %>
+  	        <%= contact.first_name %> <%=contact.last_name %>        
+  	      <% end %>
+       </div>
+      <% end %>
+    <% end %>   
+  <% end %>
+</div>
 
 <br>

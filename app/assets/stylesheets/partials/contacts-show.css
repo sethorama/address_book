@@ -40,3 +40,20 @@ h2 {
 	margin-top: 5px;
 }
 
+@media (min-width: 769px) {
+	.contact {
+	text-align: left;
+	}
+	.contact a {
+		margin-left: 10px;
+	}
+
+	.letter-header {
+	max-width: 50%;
+	}
+
+	.contacts-wrapper {
+		margin-left: 150px;
+	}
+}
+
