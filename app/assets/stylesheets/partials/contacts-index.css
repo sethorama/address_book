@@ -19,7 +19,6 @@ h2 {
 	display: inline-block;
 	margin-top: 10px;
 	border-radius: 10px;
-	/*background: #e0e4ef;*/
 }
 
 .contact a:hover,
@@ -58,6 +57,10 @@ h2 {
 
 	.contacts-wrapper {
 		margin-left: 150px;
+	}
+
+	.contact:last-child {
+		max-width: 50%;
 	}
 }
 

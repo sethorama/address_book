@@ -1,16 +1,15 @@
 
 
 .nav-links {
-	z-index: 1;
 	padding-bottom: 15px;
 	width: 100%;
 }
 
 .nav-links h1 {
 	font-family: 'Lobster', cursive, sans-serif;
-	font-weight: normal;
-	font-size: 2.25em;
+	font-size: 3em;
 	text-align: center;
+	color: #891616;
 }
 
 .nav-links a,
@@ -52,7 +51,7 @@
 
 	.nav-bar {
 		width: 100%;
-		background: #d2d8e7;
+		background: #e1e7f6;
 		top: 0;
 		border-bottom: 1px solid;
 		border-top: 1px solid;
