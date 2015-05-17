@@ -10,6 +10,10 @@ h2 {
 	text-align: center;
 }
 
+.contact:last-child {
+	border-bottom: 1px solid;
+}
+
 .contact a {
 	padding: 5px 20px;
 	display: inline-block;
