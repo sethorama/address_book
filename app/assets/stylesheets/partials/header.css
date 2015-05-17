@@ -1,13 +1,9 @@
-.nav-bar {
-	width: 100%;
-	background: #d2d8e7;
-	top: 0;
-	border-bottom: 1px solid;
-	border-top: 1px solid;	
-}
+
 
 .nav-links {
+	z-index: 1;
 	padding-bottom: 15px;
+	width: 100%;
 }
 
 .nav-links h1 {
@@ -26,28 +22,60 @@
 }
 
 .nav-links a {
-	font-size: 1.5em;
-	display: inline-block;
-	padding: 5px 10px;
-	margin-bottom: 10px;
-	border: 1px solid;
-	border-radius: 5px;
+	font-size: 1.5em;	
+	position: fixed;
+	bottom: 15px;
 }
 
 .nav-left {
-	float: left;
-	margin-left: -15px;
+	left: 15px;
 }
 
 .nav-right {
-	float: right;
-	margin-right: 15px;
+	right: 15px;
+}
+
+.nav-wide {
+	display: none;
 }
 
 @media (min-width: 769px) {
 	.nav-links {
 		max-width: 768px;
 		margin: auto;
+	}
+
+	.nav-bar {
+		width: 100%;
+		background: #d2d8e7;
+		top: 0;
+		border-bottom: 1px solid;
+		border-top: 1px solid;
+	}
+
+	.nav-links a {
+		
+		display: inline-block;
+		padding: 5px 10px;
+		margin-bottom: 10px;
+		border: 1px solid;
+		border-radius: 5px;
+		position: initial;
+	}
+	.nav-left {
+		float: left;
+	}
+
+	.nav-right {
+		float: right;
+	}
+
+	.nav-wide {
+		display: initial;
+	}
+
+	.nav-mobile {
+		display: none;
 	}
 }
 
