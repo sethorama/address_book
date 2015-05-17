@@ -27,7 +27,7 @@ h2 {
 }
 
 .contacts-header {
-	max-width: 70%;
+	max-width: 90%;
 	font-size: 1.25em;
 	margin: auto;
 }
@@ -49,6 +49,10 @@ h2 {
 	}
 	.contact a {
 		margin-left: 10px;
+	}
+
+	.contacts-header {
+		max-width: 70%
 	}
 
 	.letter-header {
