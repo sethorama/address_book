@@ -37,6 +37,12 @@ footer {
 	display: table;
 }
 
+#error_explanation,
+#error_explanation h2 {
+	text-align: left;
+	color: #891616;
+}
+
 @media (min-width: 769px) {
 	.body-wrapper {
 		max-width: 900px;
