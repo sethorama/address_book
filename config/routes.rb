@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :users, except: [:show]
   resources :user_sessions, only: [:new, :create]
+  resources :password_reset, only: [:new, :create, :edit, :update]
 
   resources :contacts
   root 'contacts#index'

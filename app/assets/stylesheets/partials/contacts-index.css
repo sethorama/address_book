@@ -15,16 +15,12 @@ h2 {
 	display: inline-block;
 	margin-top: 10px;
 	border-radius: 10px;
-	background: #e0e4ef;
+	/*background: #e0e4ef;*/
 }
 
 .contact a:hover,
 .contacts-header a:hover {		
 	color: #429e1e;
-}
-
-.contact a:hover {
-	background: #d2d8e7;
 }
 
 .contacts-header {
