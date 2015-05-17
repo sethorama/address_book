@@ -14,13 +14,17 @@
 			<h1>Address Book</h1>
 			<ul>
 				<% if logged_in? %>
-					<li><span class="nav-mobile"><%= link_to '<i class="fa fa-plus"></i>'.html_safe, new_contact_path, class: "nav-left" %></span>
+					<li>
+						<span class="nav-mobile"><%= link_to '<i class="fa fa-plus"></i>'.html_safe, new_contact_path, class: "nav-left" %></span>
 						<span class="nav-wide"><%= link_to "New Contact", new_contact_path, class: "nav-left" %></span></li>
-					<li><span class="nav-mobile"><%= link_to '<i class="fa fa-sign-out"></i>'.html_safe, logout_path, method: :delete, class: "nav-right" %></span>
+					<li>
+						<span class="nav-mobile"><%= link_to '<i class="fa fa-sign-out"></i>'.html_safe, logout_path, method: :delete, class: "nav-right" %></span>
 						<span class="nav-wide"><%= link_to "Sign Out", logout_path, method: :delete, class: "nav-right" %></span></li>
-				<% else %>
-					<li><%= link_to "Sign In", login_path, class: "nav-left"%></li>
-					<li><%= link_to "Register", new_user_path, class: "nav-right" %></li>
+				<% else %>					
+					<li>
+					<span class="nav-mobile register-mobile"><%= link_to '<i class="fa fa-chevron-up"></i><b>Register</b>'.html_safe, new_user_path, class: "nav-right" %></span>
+						<span class="nav-wide"><%= link_to "Register", new_user_path, class: "nav-right" %></span>
+					</li>
 				<% end %>
 			</ul>	
 		</div>
