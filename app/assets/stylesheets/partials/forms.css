@@ -1,6 +1,6 @@
 input[type="text"],
 input[type="password"] {
-	width: 80%;
+	width: 90%;
 	height: 30px;
 	margin-top: 5px;
 	margin-bottom: 15px;
@@ -15,11 +15,12 @@ input[type="submit"] {
 	background: #419613;
 	color: white;
 	font-size: 1.25em;
-	padding: 10px 50px;
+	padding: 10px 20px;
 	cursor: pointer;
 	border: 1px solid white;
 	border-radius: 5px;
-	margin-top: 10px;	
+	margin-top: 10px;
+	width: 90%;	
 }
 
 .back,
@@ -42,7 +43,12 @@ input[type="submit"] {
 
 @media (min-width: 769px) {
 	input[type="text"],
-	input[type="password"] {
+	input[type="password"],
+	input[type="submit"] {
 		max-width: 500px;
+	}
+
+	input[type="submit"] {
+		width: initial;
 	}
 }

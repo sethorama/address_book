@@ -23,12 +23,12 @@ h2 {
 }
 
 .body-wrapper {
-	max-width: 80%;
+	max-width: 65%;
 	margin: auto;
 }
 
 footer {
-
+	margin-left: 20px;
 }
 
 .clear:after {
