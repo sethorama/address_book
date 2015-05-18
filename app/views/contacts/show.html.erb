@@ -1,10 +1,12 @@
 	<div class="contact-show">
-		<h1><%= @contact.first_name %> <%= @contact.last_name %></h1>
+		<h1>
+			<%= @contact.first_name %> <%= @contact.last_name %>&nbsp;&nbsp;
+		</h1>
 
 		<ul>
 		  <li><%= @contact.street %></li>
 		  <li><%= @contact.city %>, <%= @contact.state %> <%= @contact.zip_code %></li>
-		  <li><span class="contact-title">Phone Number: </span><%= @contact.phone_number %></li>
+		  <li><%= @contact.phone_number %></li>
 		</ul>
 	</div>
 	<br />
@@ -12,6 +14,7 @@
 <footer>
 	<%= link_to 'Edit', edit_contact_path(@contact), class: "back" %>
 	<%= link_to 'Back', contacts_path, class: "back" %>
+	<%= link_to "Delete", @contact, class: "back", method: :delete, data: { confirm: "Are you sure you want to delete this contact?" } %>
 </footer>
 
 
