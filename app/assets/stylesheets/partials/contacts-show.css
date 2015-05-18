@@ -30,4 +30,13 @@
 	color: #fd3b3b;
 }
 
+.email-link a,
+.email-link a:visited {
+	color: #429e1e;
+}
+
+.email-link a:hover {
+	color: #219212;
+}
+
 

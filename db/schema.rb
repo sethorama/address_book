@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150514202804) do
+ActiveRecord::Schema.define(version: 20150518171325) do
 
   create_table "contacts", force: true do |t|
     t.string   "first_name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20150514202804) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "contact_email"
   end
 
   add_index "contacts", ["last_name"], name: "index_contacts_on_last_name", using: :btree

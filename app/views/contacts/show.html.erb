@@ -1,12 +1,13 @@
 	<div class="contact-show">
 		<h1>
-			<%= @contact.first_name %> <%= @contact.last_name %>&nbsp;&nbsp;
+			<%= @contact.first_name %> <%= @contact.last_name %>
 		</h1>
 
 		<ul>
 		  <li><%= @contact.street %></li>
 		  <li><%= @contact.city %>, <%= @contact.state %> <%= @contact.zip_code %></li>
 		  <li><%= @contact.phone_number %></li>
+		  <li class="email-link"><%= mail_to @contact.contact_email %></li>
 		</ul>
 	</div>
 	<br />
