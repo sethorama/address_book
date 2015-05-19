@@ -1,10 +1,20 @@
 class UserMailer < ActionMailer::Base
-  default_url_options[:host] = "localhost:3000"
-  default from: "from@example.com"
+
+  default from: "noreply@tsethorama-address-book.com"
+
+  ActionMailer::Base.smtp_settings = {
+  :port           => ENV['MAILGUN_SMTP_PORT'],
+  :address        => ENV['MAILGUN_SMTP_SERVER'],
+  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  :domain         => 'https://sethorama-address-book.herokuapp.com',
+  :authentication => :plain
+}
+ActionMailer::Base.delivery_method = :smtp
 
   def welcome_email(user)
   	@user = user
-  	@url = 'localhost:3000'
+  	@url = 'https://sethorama-address-book.herokuapp.com'
   	mail to: user.email, subject: 'Welcome to Address Book!'
   end
 
