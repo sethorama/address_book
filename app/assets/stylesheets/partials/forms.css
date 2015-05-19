@@ -23,6 +23,10 @@ input[type="submit"] {
 	width: 90%;	
 }
 
+input[type="submit"]:hover {
+	background: #429e1e;
+}
+
 .back,
 .back:visited {
 	color: #2f4f22;	
