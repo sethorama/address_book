@@ -3,13 +3,45 @@
 	<head>
 		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+		<style>
+			h1 {
+				font-family: 'Lobster', cursive, sans-serif;
+				font-size: 3em;
+				text-align: center;
+				color: #891616;
+			}
+			h2, 
+			p,
+			footer {
+				font-family: 'Nunito', cursive, sans-serif;
+				color: #2f4f22;
+			}
+			p,
+			footer,
+			a {
+				font-size: 1.25em;
+			}
+			a {
+				text-decoration: none;
+			}
+			a,
+			a:visited {
+				color: #2f4f22;
+			}
+			a:hover {
+				color: #429e1e;
+			}			
+		</style>
 	</head>
 
 	<body>
-		<h1>Welcome to Address book, <%= @user.user_first_name %></h1>
+		<h1>Address Book</h1>
+		<h2>Welcome to Address book, <%= @user.user_first_name %>
 		<p>You have successfully signed up for Address Book.</p>
-		<p>Visit <%= @url %> to log in</p>
-		<p>Please use the email address and password you signed up with to log in.</p> 
-		<p>Thanks again for signing up!</p>
+		<p>Visit the <a href="<%= @url %>">login page</a> to log in</p>
+		<p>Please use the email address and password you signed up with to log in.</p>
+		<footer>Thanks again for signing up!</footer>
 	</body>
 </html>
