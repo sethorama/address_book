@@ -123,7 +123,7 @@ describe UsersController do
       it "redirects to the user" do
         user = User.create! valid_attributes
         put :update, {:id => user.to_param, :user => valid_attributes}, valid_session
-        response.should redirect_to(user)
+        response.should redirect_to(contacts_path)
       end
     end
 
@@ -157,7 +157,7 @@ describe UsersController do
     it "redirects to the users list" do
       user = User.create! valid_attributes
       delete :destroy, {:id => user.to_param}, valid_session
-      response.should redirect_to(users_url)
+      response.should redirect_to(new_user_path)
     end
   end
 

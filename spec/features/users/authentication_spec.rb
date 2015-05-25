@@ -15,7 +15,7 @@ describe "Logging In" do
 		fill_in "Password", with: "password"
 		click_button "Sign In"
 
-		expect(page).to have_content("Listing contacts")
+		expect(page).to have_content("Contacts")
 		expect(page).to have_content("You've been logged in!")
 	end
 

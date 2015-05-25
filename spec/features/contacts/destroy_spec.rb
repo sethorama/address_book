@@ -16,9 +16,9 @@ describe "Editing contacts" do
 	end
 
 	it "deletes a contact successfully" do
-		visit "/contacts"
+		visit contact_path(contact.id)
 		expect(Contact.count).to eq(1)
-		click_link "Destroy"
+		click_link "Delete"
 		expect(Contact.count).to eq(0)
 	end
 end

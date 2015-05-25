@@ -21,7 +21,7 @@ describe "Editing contacts" do
 		options[:zip_code] ||= "22222"
 		options[:phone_number] ||= "5555551212"
 
-		visit "/contacts"
+		visit contact_path(contact.id)
 		click_link "Edit"
 
 		fill_in "First Name", with: options[:first_name]

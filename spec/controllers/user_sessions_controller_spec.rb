@@ -61,7 +61,7 @@ describe UserSessionsController do
       end
 
       it "gives a flash error" do
-        post :create
+        post :create, email: email, password: password
         expect(flash[:error]).to eq("There was a problem logging in. Please check your email and/or password.")
       end
     end
