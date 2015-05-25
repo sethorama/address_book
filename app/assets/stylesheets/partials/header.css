@@ -7,7 +7,7 @@
 
 .nav-links h1 {
 	font-family: 'Lobster', cursive, sans-serif;
-	font-size: 3em;
+	font-size: 2.5em;
 	text-align: center;
 	color: #891616;
 }
@@ -33,6 +33,7 @@
 
 .nav-right {
 	right: 15px;
+	margin-right: 25px;
 }
 
 .nav-wide {

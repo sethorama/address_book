@@ -27,13 +27,26 @@ h2 {
 }
 
 .contacts-header {
-	max-width: 90%;
-	font-size: 1.25em;
-	margin: auto;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+}
+
+.contacts-header li {
+	font-size: .53em;
 }
 
 .contacts-header a {	
 	color: #2f4f22;	
+}
+
+.contacts-wrapper {
+	max-width: 85%;
+}
+
+.contacts-heading {
+	margin-top: -20px;
+	padding: 0;
 }
 
 .letter-header {
@@ -52,7 +65,22 @@ h2 {
 	}
 
 	.contacts-header {
-		max-width: 70%
+		max-width: 70%;
+		position: initial;
+	}
+
+	.contacts-header ul {
+		margin-left: -50px;
+	}
+
+	.contacts-heading {
+		margin-top: 65px;
+		margin-left: -150px;
+	}
+
+	.contacts-header li {
+		display: inline-block;
+		font-size: 1em;
 	}
 
 	.letter-header {

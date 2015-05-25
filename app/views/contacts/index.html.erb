@@ -1,10 +1,14 @@
-<h2>Contacts</h2>
+<h2 class="contacts-heading">Contacts</h2>
 <% ordered_contacts = @contacts.sort_by {|c| [c.last_name.downcase, c.first_name.downcase] } %>
 
 <div class="contacts-header">
+  <ul>
   <% ('A'..'Z').each do |letter| %>
+    <li>
     <a href="#<%= letter %>"><%= letter %></a>
+    </li>
   <% end %>
+  </ul>
 </div>  
   
 <div class="contacts-wrapper">
