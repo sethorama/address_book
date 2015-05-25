@@ -4,7 +4,7 @@ class PasswordResetController < ApplicationController
 	end
 
 	def create
-		user = User.find_by(email: params[:email])
+		user = User.find_by(email: params[:email].downcase)
 		if user
 			user.generate_password_reset_token!
 			UserMailer.password_reset(user).deliver
