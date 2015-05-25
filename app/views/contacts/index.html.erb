@@ -3,7 +3,7 @@
 
 <div class="contacts-header">
   <ul>
-  <% ('A'..'Z').each do |letter| %>
+  <% ('A'..'Z').step(1) do |letter| %>
     <li>
     <a href="#<%= letter %>"><%= letter %></a>
     </li>

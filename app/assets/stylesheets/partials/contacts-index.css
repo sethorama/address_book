@@ -29,9 +29,8 @@ h2 {
 .contacts-header {
 	position: fixed;
 	right: 10px;
-	bottom: 10px;
-	top: 10px;
-	overflow: none;
+	bottom: 25px;
+	max-height: 80%;
 }
 
 .contacts-header li {
