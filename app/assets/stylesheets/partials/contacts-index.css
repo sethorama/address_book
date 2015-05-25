@@ -29,11 +29,11 @@ h2 {
 .contacts-header {
 	position: fixed;
 	right: 10px;
-	bottom: 25px;
+	bottom: 13px;
 }
 
 .contacts-header li {
-	font-size: .53em;
+	font-size: .5em;
 }
 
 .contacts-header a {	
