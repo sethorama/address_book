@@ -6,8 +6,8 @@ class UserSessionsController < ApplicationController
   	user = User.find_by(email: params[:email])
 
   	if user && user.authenticate(params[:password])
-      if params[:remeber_me]
-        signed_token = Rials.application.message_verifier(:remeber_me).generate(user.id)
+      if params[:remember_me]
+        signed_token = Rails.application.message_verifier(:remember_me).generate(user.id)
         cookies.permanent.signed[:remember_me_token] = signed_token
       end
 	  	session[:user_id] = user.id
