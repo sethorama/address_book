@@ -51,7 +51,7 @@
 
 @media (min-width: 769px) {
 	.nav-links {
-		max-width: 768px;
+		max-width: 1024px;
 		margin: auto;
 	}
 
@@ -82,6 +82,11 @@
 
 	.nav-wide {
 		display: initial;
+	}
+
+	.profile {
+		float: right;
+		margin-right: 25px;
 	}
 
 	.nav-mobile {
