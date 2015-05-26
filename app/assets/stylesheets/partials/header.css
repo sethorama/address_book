@@ -23,30 +23,31 @@
 
 .nav-links a {
 	font-size: 1.5em;	
-	position: fixed;
-	bottom: 15px;
+	position: fixed;	
 }
 
 .nav-left {
 	left: 15px;
+	bottom: 15px;
 }
 
 .nav-left-top {
-		top: 60px;
+	top: 60px;
+	left: 15px;
+	bottom: initial;
 }
 
 .nav-right {
 	right: 15px;
 	margin-right: 25px;
+	bottom: 15px;
 }
 
 .nav-wide {
 	display: none;
 }
 
-.register-mobile:hover {
-	content: "Register";
-}
+
 
 @media (min-width: 769px) {
 	.nav-links {
