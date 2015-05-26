@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'user_sessions/create'
 
-  resources :users, except: [:show]
+  resources :users
   resources :user_sessions, only: [:new, :create]
   resources :password_reset, only: [:new, :create, :edit, :update]
 

@@ -45,6 +45,17 @@ input[type="submit"]:hover {
 	color: #429e1e;
 }
 
+.password-message {
+	color: #891616;
+	font-size: .9em;
+}
+
+.warning,
+.warning:visited,
+.warning:active {
+	color: #891616;
+}
+
 @media (min-width: 769px) {
 	input[type="text"],
 	input[type="password"],

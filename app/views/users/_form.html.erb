@@ -22,16 +22,27 @@
   <div class="field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
-  </div>
+  </div>     
   <div class="field">
-    <%= f.label :password %><br>
+    <%= f.label :password %>
+    <% if logged_in? %>
+      <span class="password-message">*Leave blank to keep current password</span>
+    <% end %><br>    
+  <div class="field">
     <%= f.password_field :password %>
-  </div>
+  </div>    
   <div class="field">
-    <%= f.label :password_confirmation, "Password Confirmation" %><br>
+    <%= f.label :password_confirmation, "Password Confirmation" %>
+    <% if logged_in? %>
+      <span class="password-message">*Leave blank to keep current password</span>
+    <% end %><br>
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit "Register" %>
+    <% if logged_in? %>
+      <%= f.submit "Update Profile" %>
+    <% else %>
+      <%= f.submit "Register" %>
+    <% end %>
   </div>
 <% end %>

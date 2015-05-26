@@ -33,7 +33,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to contacts_path, notice: 'User was successfully updated.' }
+        format.html { redirect_to contacts_path, notice: 'Profile was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -46,6 +46,9 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     @user.destroy
+    session[:user_id] = nil
+    cookies.delete(:remember_me_token)
+    reset_session    
     respond_to do |format|
       format.html { redirect_to new_user_path, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }

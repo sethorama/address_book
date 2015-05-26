@@ -5,6 +5,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
+    @contacts = current_user.contacts.all
     @ordered_contacts = current_user.contacts.sort_by { |c| [c.last_name.downcase, c.first_name.downcase] }
   end
 

@@ -31,6 +31,10 @@
 	left: 15px;
 }
 
+.nav-left-top {
+		top: 60px;
+}
+
 .nav-right {
 	right: 15px;
 	margin-right: 25px;
