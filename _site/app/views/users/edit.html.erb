@@ -1,0 +1,19 @@
+<h1>Update Profile</h1>
+
+<%= render 'form' %>
+
+
+<footer>
+  <span class="nav-mobile contact-footer-icon">
+    <%= link_to '<i class="fa fa-home"></i>'.html_safe, contacts_path %>
+  </span>
+  <span class="nav-wide">
+    <%= link_to 'Home', contacts_path, class: "back" %>
+  </span>
+  <span class="nav-mobile contact-delete-icon">
+    <%= link_to '<i class="fa fa-ban"></i>'.html_safe, @user, method: :delete, data: { confirm: "Are you sure you want to delete your account? This cannot be undone!" } %>
+  </span>
+  <span class="nav-wide">
+    <%= link_to "Delete", @user, class: "back warning", method: :delete, data: { confirm: "Are you sure you want to delete your account? This cannot be undone!" } %>
+  </span> 
+</footer>

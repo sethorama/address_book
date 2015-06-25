@@ -1,0 +1,38 @@
+	<div class="contact-show">
+		<h1>
+			<%= @contact.first_name %> <%= @contact.last_name %>
+		</h1>
+
+		<ul>
+		  <li><%= @contact.street %></li>
+		  <li><%= @contact.city %>, <%= @contact.state %> <%= @contact.zip_code %></li>
+		  <li><%= @contact.phone_number %></li>
+		  <li class="email-link"><%= mail_to @contact.contact_email %></li>
+		</ul>
+	</div>
+	<br />
+
+<footer>
+	<span class="nav-mobile contact-footer-icon">
+		<%= link_to '<i class="fa fa-home"></i>'.html_safe, contacts_path %>
+	</span>
+	<span class="nav-wide">
+		<%= link_to 'Home', contacts_path, class: "back" %>
+	</span>
+
+	<span class="nav-mobile contact-footer-icon">
+		<%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_contact_path(@contact) %>
+	</span>
+	<span class="nav-wide">
+		<%= link_to 'Edit', edit_contact_path(@contact), class: "back" %>
+	</span>
+
+	<span class="nav-mobile contact-delete-icon">
+		<%= link_to '<i class="fa fa-ban"></i>'.html_safe, @contact, method: :delete, data: { confirm: "Are you sure you want to delete this contact?" } %>
+	</span>
+	<span class="nav-wide">
+		<%= link_to "Delete", @contact, class: "back warning", method: :delete, data: { confirm: "Are you sure you want to delete this contact?" } %>
+	</span>	
+</footer>
+
+

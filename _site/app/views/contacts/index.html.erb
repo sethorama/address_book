@@ -1,0 +1,34 @@
+<h2 class="contacts-heading">Contacts</h2>
+
+<div class="contacts-header">
+  <ul>
+  <% ('A'..'Z').each do |letter| %>
+    <li>
+    <a href="#<%= letter %>"><%= letter %></a>
+    </li>
+  <% end %>
+  </ul>
+</div>  
+  
+<div class="contacts-wrapper">
+  <% ('A'..'Z').each do |letter| %> 
+      
+    <div id='<%= letter %>' class="letter-header">
+      <%= letter %>
+    </div>
+
+    <% @ordered_contacts.each do |contact| %>
+      <% if contact.last_name.downcase.first == letter.downcase %>
+  	
+  		        
+        <div class="contact">      
+  	      <%= link_to contact do %>
+  	        <%= contact.first_name %> <%=contact.last_name %>        
+  	      <% end %>
+       </div>
+      <% end %>
+    <% end %>   
+  <% end %>
+</div>
+
+<br>

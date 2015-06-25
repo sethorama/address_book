@@ -1,0 +1,42 @@
+.contact-show ul li {
+	margin-bottom: 5px;
+	font-size: 1.5em;
+	margin-left :-35px;
+	color: #444;
+}
+
+.contact-footer-icon,
+.contact-delete-icon {
+	font-size: 1.75em;
+	margin: 5px;
+	padding: 5px;
+}
+
+.contact-footer-icon a,
+.contact-footer a:visited {
+	color: #2f4f22;
+}
+
+.contact-footer-icon a:hover {
+	color: #429e1e;
+}
+
+.contact-delete-icon a,
+.contact-delete-icon a:visited {
+	color: #891616;
+}
+
+.contact-delete-icon a:hover {
+	color: #fd3b3b;
+}
+
+.email-link a,
+.email-link a:visited {
+	color: #429e1e;
+}
+
+.email-link a:hover {
+	color: #219212;
+}
+
+

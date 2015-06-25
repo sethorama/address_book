@@ -1,0 +1,15 @@
+<h1>Sign In</h1>
+<%= form_tag user_sessions_path do %>
+	<%= label_tag :email, "Email Address" %><br />
+	<%= text_field_tag :email, params[:email] %>
+	<br />
+
+	<%= label_tag :password, "Password" %>&nbsp;&nbsp;<%= link_to "Forgot Password?", new_password_reset_path %> <br />
+	<%= password_field_tag :password %>
+	<br />
+
+	<%= check_box_tag :remember_me %>
+	<%= label_tag :remember_me, "Remember Me?" %><br />
+	<br />
+	<%= submit_tag "Sign In" %>
+<% end %>

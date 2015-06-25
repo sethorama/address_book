@@ -1,0 +1,51 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+	padding: 0;
+	margin: 0 0 50px 0;
+	background: #efefef;
+	color: #2f4f22;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+h2 {
+	text-align: center;
+}
+
+.body-wrapper {
+	max-width: 65%;
+	margin: auto;
+}
+
+footer {
+	margin-left: 20px;
+}
+
+.clear:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+#error_explanation,
+#error_explanation h2 {
+	text-align: left;
+	color: #891616;
+}
+
+@media (min-width: 769px) {
+	.body-wrapper {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+}

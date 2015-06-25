@@ -1,0 +1,97 @@
+.contact a,
+.contact a:visited,
+.contacts-header,
+h2 {
+	color: #2f4f22;
+	font-size: 1.5em;
+}
+
+.contact {
+	text-align: center;
+}
+
+.contact:last-child {
+	border-bottom: 1px solid;
+}
+
+.contact a {
+	padding: 5px 20px;
+	display: inline-block;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+.contact a:hover,
+.contacts-header a:hover {		
+	color: #429e1e;
+}
+
+.contacts-header {
+	position: fixed;
+	right: 10px;
+	bottom: 13px;
+}
+
+.contacts-header li {
+	font-size: .5em;
+}
+
+.contacts-header a {	
+	color: #2f4f22;	
+}
+
+.contacts-wrapper {
+	max-width: 85%;
+}
+
+.contacts-heading {
+	padding: 0;
+}
+
+.letter-header {
+	padding: 5px;
+	color: #1b4618;
+	border-bottom: 1px solid #1b4618;
+	margin-top: 5px;
+}
+
+@media (min-width: 769px) {
+	.contact {
+	text-align: left;
+	}
+	.contact a {
+		margin-left: 10px;
+	}
+
+	.contacts-header {
+		max-width: 70%;
+		position: initial;
+	}
+
+	.contacts-header ul {
+		margin-left: -50px;
+	}
+
+	.contacts-heading {
+		margin-top: 65px;
+		margin-left: -150px;
+	}
+
+	.contacts-header li {
+		display: inline-block;
+		font-size: 1em;
+	}
+
+	.letter-header {
+	max-width: 50%;
+	}
+
+	.contacts-wrapper {
+		margin-left: 150px;
+	}
+
+	.contact:last-child {
+		max-width: 50%;
+	}
+}
+
